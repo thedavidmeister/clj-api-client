@@ -34,6 +34,8 @@ jobs:
             - "~/.boot/cache/lib"
           key: v1-dependencies-{{ checksum "build.boot" }}
 
+      - run: boot tests
+
       # deploy to clojars
       - deploy:
           command: |
