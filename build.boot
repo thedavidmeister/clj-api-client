@@ -7,7 +7,8 @@
  :source-paths #{"src"}
  :dependencies
  '[[org.clojure/clojure "1.9.0-alpha19"]
-   [adzerk/bootlaces "0.1.13" :scope "test"]])
+   [adzerk/bootlaces "0.1.13" :scope "test"]
+   [adzerk/boot-test "1.2.0"]])
 
 (task-options!
  pom {:project project
@@ -17,8 +18,14 @@
       :scm {:url url}})
 
 (require
- '[adzerk.bootlaces :refer :all])
+ '[adzerk.bootlaces :refer :all]
+ '[adzerk.boot-test :refer :all])
 (bootlaces! version)
+
+(deftask tests
+ []
+ (comp
+  (test)))
 
 (deftask deploy
  []

@@ -1,7 +1,8 @@
 (ns clj-api-client.core
  (:require
   environ.core
-  taoensso.timbre))
+  taoensso.timbre
+  [clojure.test :refer [deftest is]]))
 
 (defn token
  [key name]
@@ -26,3 +27,10 @@
   (if-not (clojure.string/starts-with? endpoint base-url)
    (str base-url endpoint)
    endpoint)))
+
+; TESTS
+
+(deftest ??endpoint->url
+ (let [b "foo"
+       e "bar"]
+  (is (= "foobar" (endpoint->url b e)))))
