@@ -1,7 +1,7 @@
-(def project 'thedavidmeister/clj-github)
-(def description "Simple wrapper around github endpoints")
+(def project 'thedavidmeister/clj-api-client)
+(def description "Clojure toolkit for building lightweight API clients")
 (def version "0.1.0-SNAPSHOT")
-(def url "https://github.com/thedavidmeister/clj-github")
+(def url "https://github.com/thedavidmeister/clj-api-client")
 
 (set-env!
  :source-paths #{"src"}
