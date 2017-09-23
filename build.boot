@@ -9,7 +9,8 @@
  '[[org.clojure/clojure "1.9.0-alpha19"]
    [adzerk/bootlaces "0.1.13" :scope "test"]
    [adzerk/boot-test "1.2.0"]
-   [environ "1.1.0"]])
+   [environ "1.1.0"]
+   [com.taoensso/timbre "4.10.0"]])
 
 (task-options!
  pom {:project project
